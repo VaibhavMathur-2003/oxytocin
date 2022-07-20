@@ -1,0 +1,13 @@
+.pageNotes {
+  margin-top: 20px;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.page{
+  height: 100%;
+}
+
+
