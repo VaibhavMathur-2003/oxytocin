@@ -21,6 +21,13 @@
 .category {
   background-color: transparent;
 }
+.category::placeholder{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
+  opacity: .8;
+  color: black;
+  font-weight: 500;
+}
 .showCategory {
   background-color: transparent;
   width: 50%;

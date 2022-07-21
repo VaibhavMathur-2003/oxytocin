@@ -22,7 +22,7 @@ function Note(props) {
           className="category"
           type="text"
           onChange={(e) => category(e.target.value, props.note.id)}
-          defaultValue="Enter category"
+          placeholder="Category"
         />
       )}
       <div className="footer">
