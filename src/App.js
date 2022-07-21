@@ -8,7 +8,7 @@ function App() {
 
     temporary.push({
       id: Date.now() + "Vaibhav" + Math.floor(Math.random()),
-      cate: "none",
+      cate: "None",
       text: "",
       
     });

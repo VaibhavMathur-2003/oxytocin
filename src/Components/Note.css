@@ -28,10 +28,10 @@
 }
 .showCategory input {
   width: -webkit-fill-available;
-  color: rgb(34, 0, 255);
-  font-weight: 700;
+  color: #00203FFF;
   font-size: 1rem;
   border-radius: 20px;
+  background-color: #ADEFD1FF;
 }
 .text {
   flex: 1;

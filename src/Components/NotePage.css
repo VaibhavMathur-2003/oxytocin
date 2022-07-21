@@ -52,7 +52,15 @@ font-size: 1.5rem;
 
 .page{
   height: 100%;
-  margin: 10px 100px;
+  margin: 10px 4vw;
+}
+@media only screen and (max-width: 380px) {
+  .page{
+    margin: 10px 0vw;
+  }
+  .pageNotes{
+    margin: 10px 20px;
+  }
 }
 
 

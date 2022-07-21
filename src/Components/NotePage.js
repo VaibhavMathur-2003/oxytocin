@@ -47,6 +47,7 @@ function NoteContainer(props) {
                 backgroundColor: "black",
                 fontSize: "1.3rem",
                 color: "white",
+                cursor: "pointer"
               }}
               onClick={() => {props.addNote(); setFiltered(false)}} 
             >

@@ -30,10 +30,11 @@ function Note(props) {
         <button
           style={{
             backgroundColor: "white",
-            fontSize: ".7rem",
+            fontSize: ".8rem",
             color: "red",
             borderRadius: "10px",
             marginTop: "10px",
+            cursor: "pointer"
           }}
           onClick={() => props.deleteNote(props.note.id)}
         >
