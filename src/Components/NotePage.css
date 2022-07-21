@@ -1,13 +1,58 @@
+.title{
+  font-family: Georgia, serif;
+font-size: 2.5rem;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: italic;
+font-variant: small-caps;
+text-transform: none;
+margin-bottom: 20px;
+}
+.empty{
+  font-family: Georgia, serif;
+font-size: 1.5rem;
+
+}
+.add{
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 1.3rem;
+  width: 75vw;
+}
+.add span{
+  margin-right: 50px;
+}
+.add select{
+  background-color: rgb(72, 71, 71);
+  color: white;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 20px;
+}
+.filterTitle{
+  margin: 5px auto;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background-color: white;
+  width: 20%;
+}
 .pageNotes {
-  margin-top: 20px;
+  margin: 30px 50px;
   height: 90%;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 80px;
+  
 }
 
 .page{
   height: 100%;
+  margin: 10px 100px;
 }
 
 
