@@ -3,21 +3,23 @@ import NoteContainer from "./Components/NotePage";
 import "./App.css";
 
 function App() {
+  const [notes, setNotes] = useState(
+    JSON.parse(localStorage.getItem("notes-app")) || []
+  );
   const addNote = () => {
     const temp = [...notes];
 
     temp.push({
-      id: Math.floor(Math.random()*100) +"Vaibhav"+  Date.now() ,
+      id: Math.floor(Math.random() * 100) + "Vaibhav" + Date.now(),
       cate: "None",
       text: "",
-      
     });
     setNotes(temp);
   };
-  const [notes, setNotes] = useState(
-    JSON.parse(localStorage.getItem("notes-app")) || []
-  );
-
+  
+  useEffect(() => {
+    localStorage.setItem("notes-app", JSON.stringify(notes));
+  }, [notes]);
   const deleteNote = (id) => {
     const temp = [...notes];
 
@@ -45,10 +47,6 @@ function App() {
     temp[index].text = text;
     setNotes(temp);
   };
-
-  useEffect(() => {
-    localStorage.setItem("notes-app", JSON.stringify(notes));
-  }, [notes]);
 
   return (
     <div className="App">
