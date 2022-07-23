@@ -3,11 +3,11 @@ import "./Note.css";
 
 function Note(props) {
   const [color, setColor] = useState("")
-  useEffect(()=>setColor(Math.random().toString(16).substr(-6)),[])
-  const updateText = (text, id) => {
+  useEffect(()=>setColor(Math.random().toString(17).substr(-6)),[])
+  const updateTexts = (text, id) => {
     props.updateText(text, id);
   };
-  const category = (cate, id) => {
+  const categories = (cate, id) => {
     props.category(cate, id);
   };
   return (
@@ -15,13 +15,13 @@ function Note(props) {
       <textarea
         className="text"
         defaultValue={props.note.text}
-        onChange={(event) => updateText(event.target.value, props.note.id)}
+        onChange={(event) => updateTexts(event.target.value, props.note.id)}
       />
       {!props.filter && (
         <input
           className="category"
           type="text"
-          onChange={(e) => category(e.target.value, props.note.id)}
+          onChange={(e) => categories(e.target.value, props.note.id)}
           placeholder="Category"
         />
       )}

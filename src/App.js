@@ -4,46 +4,46 @@ import "./App.css";
 
 function App() {
   const addNote = () => {
-    const temporary = [...notes];
+    const temp = [...notes];
 
-    temporary.push({
-      id: Date.now() + "Vaibhav" + Math.floor(Math.random()),
+    temp.push({
+      id: Math.floor(Math.random()*100) +"Vaibhav"+  Date.now() ,
       cate: "None",
       text: "",
       
     });
-    setNotes(temporary);
+    setNotes(temp);
   };
   const [notes, setNotes] = useState(
     JSON.parse(localStorage.getItem("notes-app")) || []
   );
 
   const deleteNote = (id) => {
-    const temporary = [...notes];
+    const temp = [...notes];
 
-    const index = temporary.findIndex((item) => item.id === id);
+    const index = temp.findIndex((item) => item.id === id);
     if (index < 0) return;
 
-    temporary.splice(index, 1);
-    setNotes(temporary);
+    temp.splice(index, 1);
+    setNotes(temp);
   };
   const category = (cate, id) => {
-    const temporary = [...notes];
+    const temp = [...notes];
 
-    const index = temporary.findIndex((item) => item.id === id);
+    const index = temp.findIndex((item) => item.id === id);
     if (index < 0) return;
 
-    temporary[index].cate = cate;
-    setNotes(temporary);
+    temp[index].cate = cate;
+    setNotes(temp);
   };
   const updateText = (text, id) => {
-    const temporary = [...notes];
+    const temp = [...notes];
 
-    const index = temporary.findIndex((item) => item.id === id);
+    const index = temp.findIndex((item) => item.id === id);
     if (index < 0) return;
 
-    temporary[index].text = text;
-    setNotes(temporary);
+    temp[index].text = text;
+    setNotes(temp);
   };
 
   useEffect(() => {
